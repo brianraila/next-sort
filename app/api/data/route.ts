@@ -17,6 +17,7 @@ export async function GET(request: NextRequest) {
 
     // Parse and sort items
     const items = parseCSV(fileContents);
+    console.log(items);
     const sortedItems = sortItems(items, sortType);
 
     return Response.json(sortedItems);
